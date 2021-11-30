@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
       "https://peaceful-wave-50465.herokuapp.com/api/users/login",
       {
         method: "POST",
-        body: JSON.stringify({ email, password }),
+        body: { email, password },
         headers: { "Content-Type": "application/json" },
       }
     );
