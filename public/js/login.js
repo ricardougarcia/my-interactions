@@ -14,7 +14,11 @@ const loginFormHandler = async (event) => {
       {
         method: "POST",
         body: JSON.stringify({ email, password }),
-        headers: { "Content-Type": "application/json" },
+        // headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+          Accept: "application/json",
+        },
       }
     );
     console.log(response);
