@@ -10,15 +10,11 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     // Send a POST request to the API endpoint
     const response = await fetch(
-      "https://peaceful-wave-50465.herokuapp.com/api/users/login",
+      "https://peaceful-wave-50465.herokuapp.com/controllers/api/users/login",
       {
         method: "POST",
         body: JSON.stringify({ email, password }),
-        // headers: { "Content-Type": "application/json" },
-        headers: {
-          "Content-Type": "application/json; charset=UTF-8",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       }
     );
     console.log(response);
